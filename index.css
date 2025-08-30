@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout{
+    display: grid;
+    grid-template-areas: 
+    "encabezado encabezado"
+    "menu contenido"
+    "pie pie";
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: "MedievalSharp", cursive;
+}
+
+.encabezado{
+    grid-area: encabezado;
+    background-color: #2c2c2e;
+    background-image: url('imagenes/logoBats.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: white;
+    padding: 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.menu{
+    grid-area: menu;
+    background-color:rgb(209, 171, 46);
+    padding: 20px;
+    color: rgb(232, 232, 232);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu li{
+    padding: 30px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.contenido{
+    grid-area: contenido;
+    background-color: rgb(86, 58, 23);
+    padding: 30px;
+    font-size: 18px;
+}
+
+.grid-tarjetas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 2000px;
+    height: 450px;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4{
+    background-color: rgb(196, 171, 79);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta1{
+    background-image: url(imagenes/Batman.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: background-image 0.3s ease;
+}
+
+/* Pseudo-elemento para el texto */
+.tarjeta1::after {
+    content: "Batman, el héroe enmascarado que lucha contra el mundo del crimen organizado en Ciudad Gotham combatiendo a peligrosos criminales que amenazan la paz de sus conciudadanos.";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Centra el texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Por defecto, el texto está oculto */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo para que se vea mejor el texto */
+}
+
+.tarjeta1:hover {
+    /* Al pasar el cursor, quita la imagen de fondo */
+    background-image: none;
+}
+
+.tarjeta1:hover::after {
+    /* Al pasar el cursor, muestra el texto */
+    opacity: 1;
+}
+
+.tarjeta2{
+    background-image: url(imagenes/Batgirl.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+     transition: background-image 0.3s ease;
+}
+
+/* Pseudo-elemento para el texto */
+.tarjeta2::after {
+    content: "Batgirl, la hija del Comisario James Gordon es una bibliotecaria de día y un espíritu justiciero por la noche.";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Centra el texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Por defecto, el texto está oculto */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo para que se vea mejor el texto */
+}
+
+.tarjeta2:hover {
+    /* Al pasar el cursor, quita la imagen de fondo */
+    background-image: none;
+}
+
+.tarjeta2:hover::after {
+    /* Al pasar el cursor, muestra el texto */
+    opacity: 1;
+}
+
+
+.tarjeta3{
+    background-image: url(imagenes/Nightwing.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+     transition: background-image 0.3s ease;
+}
+
+/* Pseudo-elemento para el texto */
+.tarjeta3::after {
+    content: "Nightwing, fue un acróbata de circo dentro de una prestigiosa familia de trapecistas que, cuando era muy joven, vio morir a sus padres en manos del mafioso Anthony Zucco y fue adoptado por Bruce Wayne.";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Centra el texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Por defecto, el texto está oculto */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo para que se vea mejor el texto */
+}
+
+.tarjeta3:hover {
+    /* Al pasar el cursor, quita la imagen de fondo */
+    background-image: none;
+}
+
+.tarjeta3:hover::after {
+    /* Al pasar el cursor, muestra el texto */
+    opacity: 1;
+}
+
+.tarjeta4{
+    background-image: url(imagenes/Red\ Hood.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+ transition: background-image 0.3s ease;
+}
+
+/* Pseudo-elemento para el texto */
+.tarjeta4::after {
+    content: "Red Hood, era el hijo de Willis Todd, un ladrón de poca monta que murió siendo la segunda mano de Dos Caras, se cree que éste lo mató, y de Catherine Todd, una drogadicta. ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Centra el texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Por defecto, el texto está oculto */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo para que se vea mejor el texto */
+}
+
+.tarjeta4:hover {
+    /* Al pasar el cursor, quita la imagen de fondo */
+    background-image: none;
+}
+
+.tarjeta4:hover::after {
+    /* Al pasar el cursor, muestra el texto */
+    opacity: 1;
+}
+
+.pie{
+    grid-area: pie;
+    background-color: #030303;
+    font-size: 10px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.redes-sociales {
+    display: flex; /* Convierte la lista en un contenedor flexible */
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 15px; /* Añade espacio entre los íconos */
+}
+
+
+/*  Encabezado con logotipo y título.
+    Menú lateral con enlaces.
+    Pie de página con contacto y redes sociales.
+    Súbelo a la rama gh-pages y comparte el link con el docente por AVA */
